@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ubuntu | dfPropaganda]]></title>
+  <link href="http://dfpropaganda.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
+  <link href="http://dfpropaganda.github.io/"/>
+  <updated>2014-08-13T00:18:46+07:00</updated>
+  <id>http://dfpropaganda.github.io/</id>
+  <author>
+    <name><![CDATA[dfpropaganda]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Installing iRedmail in Ubuntu With Nginx]]></title>
+    <link href="http://dfpropaganda.github.io/blog/2014/08/13/installing-iredmail-in-ubuntu-with-nginx/"/>
+    <updated>2014-08-13T00:04:10+07:00</updated>
+    <id>http://dfpropaganda.github.io/blog/2014/08/13/installing-iredmail-in-ubuntu-with-nginx</id>
+    <content type="html"><![CDATA[<p>Roundcubemail</p>
+
+<p>We just need to add a server block for nginx and make it work with PHP, create a file at /etc/nginx/sites-available/mail.yourdomain.com with the following configuration (you must change yourdomain.com for your actual domain):</p>
+
+<p><figure class='code'><figcaption><span>./dfPropaganda &ndash;installing iRedmail </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>server {&lt;br/>
+</span><span class='line'>    listen      80;
+</span><span class='line'>    server_name mail.yourdomain.com;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>location / {
+</span><span class='line'>        rewrite ^ https://$server_name$1 permanent;
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>location ~ \.php$ {
+</span><span class='line'>        fastcgi_pass   unix:/var/run/php5-fpm.sock;
+</span><span class='line'>        fastcgi_index  index.php;
+</span><span class='line'>        include fastcgi_params;
+</span><span class='line'>        fastcgi_param SCRIPT_FILENAME /usr/share/apache2$fastcgi_script_name;
+</span><span class='line'>}
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>}&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>server {&lt;br/>
+</span><span class='line'>    listen       443;
+</span><span class='line'>    server_name  mail.yourdomain.com;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>location / {
+</span><span class='line'>    root   /usr/share/apache2/roundcubemail;
+</span><span class='line'>    index  index.php index.html;
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>location ~ \.php$ {
+</span><span class='line'>    root            /usr/share/apache2/roundcubemail;
+</span><span class='line'>    include         fastcgi_params;
+</span><span class='line'>    fastcgi_pass    unix:/var/run/php5-fpm.sock;
+</span><span class='line'>    fastcgi_index   index.php;
+</span><span class='line'>    fastcgi_param   SCRIPT_FILENAME /usr/share/apache2/roundcubemail$fastcgi_script_name;
+</span><span class='line'>    fastcgi_param SERVER_NAME $http_host;
+</span><span class='line'>    fastcgi_ignore_client_abort on;
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>ssl                  on;
+</span><span class='line'>ssl_certificate      /etc/ssl/certs/iRedMail_CA.pem;
+</span><span class='line'>ssl_certificate_key  /etc/ssl/private/iRedMail.key;
+</span><span class='line'>ssl_session_timeout  5m;
+</span><span class='line'>ssl_protocols  SSLv2 SSLv3 TLSv1;
+</span><span class='line'>ssl_ciphers  ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;
+</span><span class='line'>ssl_prefer_server_ciphers   on;
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>}</span></code></pre></td></tr></table></div></figure></p>
+
+<p>This makes sure that the web mail will be only accessed through HTTPS and you can change the code to make what you want .</p>
+
+<p><figure class='code'><figcaption><span>./dfPropaganda &ndash;installing iRedmail </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ln /etc/nginx/sites-availabled/mail.mydoimain.com /etc/nginx/sites-enabled/mail.mydoimain.com</span></code></pre></td></tr></table></div></figure></p>
+
+<p>iRedAdmin</p>
+
+<p>This was wasn&rsquo;t so easy, this admin panel was built with python, we would require a different configuration to make it work. We&rsquo;ll need to install USWGI and its plug-in for python.</p>
+
+<p><figure class='code'><figcaption><span>./dfPropaganda &ndash;installing iRedmail </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>apt-get update&lt;br/>
+</span><span class='line'>apt-get install nginx uwsgi uwsgi-plugin-python python-pip python-mysqldb&lt;br/>
+</span><span class='line'>pip install jinja2&lt;br/>
+</span><span class='line'>pip install web.py</span></code></pre></td></tr></table></div></figure></p>
+
+<p><figure class='code'><figcaption><span>Then you will need to create the config file for our app at </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Then you will need to create the config file for our app at : /etc/uwsgi/apps-available/iredadmin.ini&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>[uwsgi]
+</span><span class='line'>plugins=python&lt;br/>
+</span><span class='line'>vhost=true&lt;br/>
+</span><span class='line'>socket=/var/run/uwsgi/app/iredadmin/iredadmin.socket</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Create a hard link for it:</p>
+
+<p>ln /etc/uwsgi/apps-available/iredadmin.ini /etc/uwsgi/apps-enabled/iredadmin.ini</p>
+
+<p>Add permission to access the iredadmin files:</p>
+
+<p>chown www-data:www-data /usr/share/apache2/iredadmin/* -R</p>
+
+<p>With this we just need to add the configuration to nginx, create a config file at /etc/nginx/sites-available/iredadmin.yourdomain.com:</p>
+
+<p><figure class='code'><figcaption><span>./dfPropaganda &ndash;installing iRedmail </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>server {&lt;br/>
+</span><span class='line'>    listen          80;
+</span><span class='line'>    server_name iredadmin.yourdomain.com;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>location / {
+</span><span class='line'>    rewrite ^(.*) https://$server_name$1 permanent;
+</span><span class='line'>}
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>}&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>server {&lt;br/>
+</span><span class='line'>    listen 443;
+</span><span class='line'>    server_name iredadmin.yourdomain.com;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>access_log  /var/log/nginx/iredadmin.access_log;
+</span><span class='line'>error_log   /var/log/nginx/iredadmin.error_log;
+</span><span class='line'>
+</span><span class='line'>location / {
+</span><span class='line'>    root /usr/share/apache2/iredadmin;
+</span><span class='line'>    uwsgi_pass unix:///var/run/uwsgi/app/iredadmin/iredadmin.socket;
+</span><span class='line'>    uwsgi_param UWSGI_PYHOME /usr/share/apache2/iredadmin/python-home;
+</span><span class='line'>    uwsgi_param UWSGI_CHDIR /usr/share/apache2/iredadmin;
+</span><span class='line'>    uwsgi_param UWSGI_SCRIPT iredadmin;
+</span><span class='line'>    include uwsgi_params;
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>location /static {
+</span><span class='line'>    alias /usr/share/apache2/iredadmin/static/;
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>ssl                  on;
+</span><span class='line'>ssl_certificate      /etc/ssl/certs/iRedMail_CA.pem;
+</span><span class='line'>ssl_certificate_key  /etc/ssl/private/iRedMail.key;
+</span><span class='line'>ssl_session_timeout  5m;
+</span><span class='line'>ssl_protocols  SSLv2 SSLv3 TLSv1;
+</span><span class='line'>ssl_ciphers  ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;
+</span><span class='line'>ssl_prefer_server_ciphers   on;
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>}</span></code></pre></td></tr></table></div></figure></p>
+
+<p>To enable the site create a link to sites-enabled:</p>
+
+<p>ln /etc/nginx/sites-availabled/iredadmin.yourdoimain.com /etc/nginx/sites-enabled/iredadmin.yourdoimain.com</p>
+
+<p><blockquote><p>How to install iredmail in ubuntu with nginx server, if you have some problem, you can comment in this post, and maybe i can help you .<br/>thanks to :</p></p><p><pre><code>http://antlite.com/blog/2011/06/ubuntu-iredmail-nginx-settings/<br/>http://stackoverflow.com/questions/15974056/setup-iredmail-admin-site-in-nginx-on-ubuntu-12-04<br/></code></pre></p><p><p></p><footer><strong>eridlabs <a href="http://blog.eridlabs.com/using-iredmail-with-nginx-ubuntu-13-04-x64/">http://blog.eridlabs.com/using-iredmail-with-nginx-ubuntu-13-04-x64/</a></strong></footer></blockquote></p>
+]]></content>
+  </entry>
+  
+</feed>
