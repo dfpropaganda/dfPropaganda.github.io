@@ -1,0 +1,36 @@
+---
+layout: post
+title: "PASSPORT By Rhenald Kasali"
+date: 2014-08-12 23:26:36 +0700
+comments: true
+categories: pendidikan 
+---
+
+{% img https://m.ak.fbcdn.net/photos-a.ak/hphotos-ak-xfa1/v/t1.0-0/10259748_10152380503404925_649143119527793549_n.jpg?oh=6519703b23a16d05aed09e7545807904&oe=5465AF80&__gda__=1417742859_1d21b75b481e03fa2d6b94838eb81b44 %}
+
+Setiap saat mulai perkuliahan, saya selalu bertanya kepada mahasiswa berapa orang yang sudah memiliki pasport. Tidak mengherankan, ternyata hanya sekitar 5% yang mengangkat tangan. Ketika ditanya berapa yang sudah pernah naik pesawat, jawabannya melonjak tajam. Hampir 90% mahasiswa saya sudah pernah melihat awan dari atas. Ini berarti mayoritas anak-anak kita hanyalah pelancong lokal.
+
+Maka, berbeda dengan kebanyakan dosen yang memberi tugas kertas berupa PR dan paper, di kelas-kelas yang saya asuh saya memulainya dengan memberi tugas mengurus pasport. Setiap mahasiswa harus memiliki "surat ijin memasuki dunia global.". Tanpa pasport manusia akan kesepian, cupet, terkurung dalam kesempitan, menjadi pemimpin yang steril. Dua minggu kemudian, mahasiswa sudah bisa berbangga karena punya pasport.
+
+Setelah itu mereka bertanya lagi, untuk apa pasport ini? Saya katakan, pergilah keluar negeri yang tak berbahasa Melayu. Tidak boleh ke Malaysia, Singapura, Timor Leste atau Brunei Darussalam. Pergilah sejauh yang mampu dan bisa dijangkau.
+
+"Uang untuk beli tiketnya bagaimana, pak?"
+Saya katakan saya tidak tahu. Dalam hidup ini, setahu saya hanya orang bodohlah yang selalu memulai pertanyaan hidup, apalagi memulai misi kehidupan dan tujuannya dari uang. Dan begitu seorang pemula bertanya uangnya dari mana, maka ia akan terbelenggu oleh constraint. Dan hampir pasti jawabannya hanyalah tidak ada uang, tidak bisa, dan tidak mungkin.
+Pertanyaan seperti itu tak hanya ada di kepala mahasiswa, melainkan juga para dosen steril yang kurang jalan-jalan. Bagi mereka yang tak pernah melihat dunia, luar negeri terasa jauh, mahal, mewah, menembus batas kewajaran dan buang-buang uang. Maka tak heran banyak dosen yang takut sekolah ke luar negeri sehingga memilih kuliah di almamaternya sendiri. Padahal dunia yang terbuka bisa membukakan sejuta kesempatan untuk maju. Anda bisa mendapatkan sesuatu yang yang terbayangkan, pengetahuan, teknologi, kedewasaan, dan wisdom.
+
+Namun beruntunglah, pertanyaan seperti itu tak pernah ada di kepala para pelancong, dan diantaranya adalah mahasiswa yang dikenal sebagai kelompok backpackers. Mereka adalah pemburu tiket dan penginapan super murah, menggendong ransel butut dan bersandal jepit, yang kalau kehabisan uang bekerja di warung sebagai pencuci piring. Perilaku melancong mereka sebenarnya tak ada bedanya dengan remaja-remaja Minang, Banjar, atau Bugis, yang merantau ke Pulau Jawa berbekal seadanya.Ini berarti tak banyak orang yang paham bahwa bepergian keluar negeri sudah tak semenyeramkan, sejauh, bahkan semewah di masa lalu.
+Seorang mahasiswa asal daerah yang saya dorong pergi jauh, sekarang malah rajin bepergian. Ia bergabung ke dalam kelompok PKI (Pedagang Kaki Lima Internasional) yang tugasnya memetakan pameran-pameran besar yang dikoordinasi pemerintah. Disana mereka membuka lapak, mengambil resiko, menjajakan aneka barang kerajinan, dan pulangnya mereka jalan-jalan, ikut kursus, dan membawa dolar. Saat diwisuda, ia menghampiri saya dengan menunjukkan pasportnya yang tertera stempel imigrasi dari 35 negara. Selain kaya teori, matanya tajam mengendus peluang dan rasa percaya tinggi. Saat teman-temannya yang lulus cum-laude masih mencari kerja, ia sudah menjadi eksekutif di sebuah perusahaan besar di luar negeri.
+
+The Next Convergence
+Dalam bukunya yang berjudul The Next Convergence, penerima hadiah Nobel ekonomi Michael Spence mengatakan, dunia tengah memasuki Abad Ke tiga dari Revolusi Industri. dan sejak tahun 1950, rata-rata pendapatan penduduk dunia telah meningkat dua puluh kali lipat. Maka kendati penduduk miskin masih banyak, adalah hal yang biasa kalau kita menemukan perempuan miskin-lulusan SD dari sebuah dusun di Madura bolak-balik Surabaya-Hongkong.
+
+Tetapi kita juga biasa menemukan mahasiswa yang hanya sibuk demo dan tak pernah keluar negeri sekalipun. Jangankan ke luar negeri, tahu harga tiket pesawat saja tidak, apalagi memiliki pasport.Maka bagi saya, penting bagi para pendidik untuk membawa anak-anak didiknya melihat dunia. Berbekal lima ratus ribu rupiah, anak-anak SD dari Pontianak dapat diajak menumpang bis melewati perbatasan Entekong memasuki Kuching. Dalam jarak tempuh sembilan jam mereka sudah mendapatkan pelajaran PPKN yang sangat penting, yaitu pupusnya kebangsaan karena kita kurang urus daerah perbatasan. Rumah-rumah kumuh, jalan berlubang, pedagang kecil yang tak diurus Pemda, dan infrastruktur yang buruk ada di bagian sini. Sedangkan hal sebaliknya ada di sisi seberang. Anak-anak yang melihat dunia akan terbuka matanya dan memakai nuraninya saat memimpin bangsa di masa depan. Di universitas Indonesia, setiap mahasiswa saya diwajibkan memiliki pasport dan melihat minimal satu negara.
+
+Dulu saya sendiri yang menjadi gembala sekaligus guide nya. Kami menembus Chiangmay dan menyaksikan penduduk miskin di Thailand dan Vietnam bertarung melawan arus globalisasi. Namun belakangan saya berubah pikiran, kalau diantar oleh dosennya, kapan memiliki keberanian dan inisiatif? Maka perjalanan penuh pertanyaan pun mereka jalani. Saat anak-anak Indonesia ketakutan tak bisa berbahasa Inggris, anak-anak Korea dan Jepang yang huruf tulisannya jauh lebih rumit dan pronounciation-nya sulit dimengerti menjelajahi dunia tanpa rasa takut.
+
+Uniknya, anak-anak didik saya yang sudah punya pasport itu 99% akhirnya dapat pergi keluar negeri. Sekali lagi, jangan tanya darimana uangnya. Mereka memutar otak untuk mendapatkan tiket, menabung, mencari losmen-losmen murah, menghubungi sponsor dan mengedarkan kotak sumbangan. Tentu saja, kalau kurang sedikit ya ditomboki dosennya sendiri.
+
+Namun harap dimaklumi, anak-anak didik saya yang wajahnya ndeso sekalipun kini dipasportnya tertera satu dua cap imigrasi luar negeri. Apakah mereka anak-anak orang kaya yang orangtuanya mampu membelikan mereka tiket? Tentu tidak. Di UI, sebagian mahasiswa kami adalah anak PNS, bahkan tidak jarang mereka anak petani dan nelayan. Tetapi mereka tak mau kalah dengan TKW yang meski tak sepandai mereka, kini sudah pandai berbahasa asing.
+
+Anak-anak yang ditugaskan ke luar negeri secara mandiri ternyata memiliki daya inovasi dan inisiatif yang tumbuh. Rasa percaya diri mereka bangkit. Sekembalinya dari luar negeri mereka membawa segudang pengalaman, cerita, gambar dan foto yang ternyata sangat membentuk visi mereka.
+Saya pikir ada baiknya para guru mulai membiasakan anak didiknya memiliki pasport. Pasport adalah tiket untuk melihat dunia, dan berawal dari pasport pulalah seorang santri dari Jawa Timur menjadi pengusaha di luar negeri. Di Italy saya bertemu Dewi Francesca, perempuan asal Bali yang memiliki kafe yang indah di Rocca di Papa. Dan karena pasport pulalah, Yohannes Surya mendapat bea siswa di Amerika Serikat. Ayo, jangan kalah dengan Gayus Tambunan atau Nazaruddin yang baru punya pasport dari uang negara.

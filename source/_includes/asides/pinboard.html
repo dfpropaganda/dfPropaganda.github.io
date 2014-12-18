@@ -1,0 +1,21 @@
+{% if site.pinboard_user %}
+<section class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title"><span class="glyphicon glyphicon-pushpin"></span>&nbsp;&nbsp;Pinboard</h3>
+</div>
+<ul id="pinboard_linkroll" class="nav nav-stacked"><p style="text-align: center">Fetching linkroll…</p></ul>
+<p style="text-align: center"><a href="http://pinboard.in/u:&#x7b;&#x7b; site.pinboard_user }}" target="_blank">View all &raquo;</a></p>
+</section>
+<script type="text/javascript">
+  var linkroll = 'pinboard_linkroll'; //id target for pinboard list
+  var pinboard_user = "{{ site.pinboard_user }}"; //id target for pinboard list
+  var pinboard_count = {{ site.pinboard_count }}; //id target for pinboard list
+  (function(){
+    var pinboardInit = document.createElement('script');
+    pinboardInit.type = 'text/javascript';
+    pinboardInit.async = true;
+    pinboardInit.src = '{{ root_url }}/javascripts/pinboard.js';
+    document.getElementsByTagName('head')[0].appendChild(pinboardInit);
+  })();
+</script>
+{% endif %}
