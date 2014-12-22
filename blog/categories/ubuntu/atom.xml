@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: ubuntu | dfPropaganda]]></title>
+  <title><![CDATA[Category: Ubuntu | dfPropaganda]]></title>
   <link href="http://dfpropaganda.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://dfpropaganda.github.io/"/>
-  <updated>2014-12-23T00:09:25+07:00</updated>
+  <updated>2014-12-23T01:45:24+07:00</updated>
   <id>http://dfpropaganda.github.io/</id>
   <author>
     <name><![CDATA[dfpropaganda]]></name>
-    
+    <email><![CDATA[delimanisti@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 

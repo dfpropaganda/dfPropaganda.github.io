@@ -26,37 +26,38 @@
     <priority>0.8</priority>
   </url>
   
-  <url>
-    <loc>http://dfpropaganda.github.io/blog/2014/08/10/sial/</loc>
-    <lastmod>2014-08-10T23:07:51+07:00</lastmod>
-    <priority>0.8</priority>
-  </url>
   
+  <url>
+    <loc>http://dfpropaganda.github.io/all-posts.html</loc>
+    <lastmod>2014-12-23T01:45:24+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
   
   <url>
     <loc>http://dfpropaganda.github.io/posts/</loc>
-    <lastmod>2014-12-23T00:09:25+07:00</lastmod>
+    <lastmod>2014-12-23T01:45:24+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://dfpropaganda.github.io/blog/archives/</loc>
+    <lastmod>2014-12-23T01:45:24+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://dfpropaganda.github.io/</loc>
-    <lastmod>2014-12-23T00:09:25+07:00</lastmod>
+    <lastmod>2014-12-23T01:45:24+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>http://dfpropaganda.github.io/blog/archives/</loc>
-    <lastmod>2014-12-23T00:09:25+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
     <loc>http://dfpropaganda.github.io/about/</loc>
-    <lastmod>2014-12-23T00:09:25+07:00</lastmod>
+    <lastmod>2014-12-23T01:45:24+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
