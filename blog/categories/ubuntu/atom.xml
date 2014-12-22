@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Ubuntu | dfPropaganda]]></title>
+  <title><![CDATA[Category: ubuntu | dfPropaganda]]></title>
   <link href="http://dfpropaganda.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://dfpropaganda.github.io/"/>
-  <updated>2014-08-13T00:18:46+07:00</updated>
+  <updated>2014-12-23T00:09:25+07:00</updated>
   <id>http://dfpropaganda.github.io/</id>
   <author>
     <name><![CDATA[dfpropaganda]]></name>
@@ -21,6 +21,9 @@
     <content type="html"><![CDATA[<p>Roundcubemail</p>
 
 <p>We just need to add a server block for nginx and make it work with PHP, create a file at /etc/nginx/sites-available/mail.yourdomain.com with the following configuration (you must change yourdomain.com for your actual domain):</p>
+
+<!-- more -->
+
 
 <p><figure class='code'><figcaption><span>./dfPropaganda &ndash;installing iRedmail </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

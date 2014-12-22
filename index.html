@@ -3,13 +3,18 @@
 <!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
 <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <title>dfPropaganda</title>
   <meta name="author" content="dfpropaganda">
 
   
-  <meta name="description" content="Roundcubemail We just need to add a server block for nginx and make it work with PHP, create a file at /etc/nginx/sites-available/mail.yourdomain.com &hellip;">
+  <meta name="description" content=" dfPropaganda
+Music, Linuxer, Idoling & FreakNote about me All Posts ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -26,723 +31,91 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
   
 
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">dfPropaganda</a></h1>
-  
-    <h2>Music, Linuxer, Idoling & FreakNote</h2>
-  
-</hgroup>
+  <body>
+    <a href="/" class="home-icon">
+      <img src="/images/home.png"/>
+    </a>
 
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="https://www.google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:dfpropaganda.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/about">About</a></li>
-  <li><a href="https://twitter.com/suryaadtmaja">Twitter</a></li>
-</ul>
+    <div class="home-page">
+  <div class="hero">
+    <h1>dfPropaganda</h1>
+<p>Music, Linuxer, Idoling & FreakNote</p>
 
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/08/13/installing-iredmail-in-ubuntu-with-nginx/">Installing iRedmail in Ubuntu With Nginx</a></h1>
+  </div>
+
+  <div class="home-field">
+    <div class="home-landing her-row">
+      <div class="container">
+        <div class="row">
+          <div id="about-me" class="col-md-offset-3 col-md-6">
+  <h4>about me</h4>
+  <p></p>
+  <div class="social-icon-list">
+  	
+    <a title="Twitter" href="https://twitter.com/suryaadtmaja"><img src="/images/glyphicons_social_31_twitter.png"/></a>
     
     
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-13T00:04:10+07:00" pubdate data-updated="true"></time>
-        
-           | <a href="/blog/2014/08/13/installing-iredmail-in-ubuntu-with-nginx/#disqus_thread"
-             data-disqus-identifier="http://dfpropaganda.github.io/blog/2014/08/13/installing-iredmail-in-ubuntu-with-nginx/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Roundcubemail</p>
-
-<p>We just need to add a server block for nginx and make it work with PHP, create a file at /etc/nginx/sites-available/mail.yourdomain.com with the following configuration (you must change yourdomain.com for your actual domain):</p>
-
-<figure class='code'><figcaption><span>./dfPropaganda &#8211;installing iRedmail </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>server {  
-</span><span class='line'>    listen      80;
-</span><span class='line'>    server_name mail.yourdomain.com;
-</span><span class='line'>
-</span><span class='line'>    location / {
-</span><span class='line'>            rewrite ^ https://$server_name$1 permanent;
-</span><span class='line'>    }
-</span><span class='line'>
-</span><span class='line'>    location ~ \.php$ {
-</span><span class='line'>            fastcgi_pass   unix:/var/run/php5-fpm.sock;
-</span><span class='line'>            fastcgi_index  index.php;
-</span><span class='line'>            include fastcgi_params;
-</span><span class='line'>            fastcgi_param SCRIPT_FILENAME /usr/share/apache2$fastcgi_script_name;
-</span><span class='line'>    }
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>server {  
-</span><span class='line'>    listen       443;
-</span><span class='line'>    server_name  mail.yourdomain.com;
-</span><span class='line'>
-</span><span class='line'>    location / {
-</span><span class='line'>        root   /usr/share/apache2/roundcubemail;
-</span><span class='line'>        index  index.php index.html;
-</span><span class='line'>    }
-</span><span class='line'>
-</span><span class='line'>    location ~ \.php$ {
-</span><span class='line'>        root            /usr/share/apache2/roundcubemail;
-</span><span class='line'>        include         fastcgi_params;
-</span><span class='line'>        fastcgi_pass    unix:/var/run/php5-fpm.sock;
-</span><span class='line'>        fastcgi_index   index.php;
-</span><span class='line'>        fastcgi_param   SCRIPT_FILENAME /usr/share/apache2/roundcubemail$fastcgi_script_name;
-</span><span class='line'>        fastcgi_param SERVER_NAME $http_host;
-</span><span class='line'>        fastcgi_ignore_client_abort on;
-</span><span class='line'>    }
-</span><span class='line'>
-</span><span class='line'>    ssl                  on;
-</span><span class='line'>    ssl_certificate      /etc/ssl/certs/iRedMail_CA.pem;
-</span><span class='line'>    ssl_certificate_key  /etc/ssl/private/iRedMail.key;
-</span><span class='line'>    ssl_session_timeout  5m;
-</span><span class='line'>    ssl_protocols  SSLv2 SSLv3 TLSv1;
-</span><span class='line'>    ssl_ciphers  ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;
-</span><span class='line'>    ssl_prefer_server_ciphers   on;
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This makes sure that the web mail will be only accessed through HTTPS and you can change the code to make what you want .</p>
-
-<figure class='code'><figcaption><span>./dfPropaganda &#8211;installing iRedmail </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ln /etc/nginx/sites-availabled/mail.mydoimain.com /etc/nginx/sites-enabled/mail.mydoimain.com</span></code></pre></td></tr></table></div></figure>
-
-
-<p>iRedAdmin</p>
-
-<p>This was wasn&rsquo;t so easy, this admin panel was built with python, we would require a different configuration to make it work. We&rsquo;ll need to install USWGI and its plug-in for python.</p>
-
-<figure class='code'><figcaption><span>./dfPropaganda &#8211;installing iRedmail </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>apt-get update  
-</span><span class='line'>apt-get install nginx uwsgi uwsgi-plugin-python python-pip python-mysqldb  
-</span><span class='line'>pip install jinja2  
-</span><span class='line'>pip install web.py</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span>Then you will need to create the config file for our app at </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Then you will need to create the config file for our app at : /etc/uwsgi/apps-available/iredadmin.ini
-</span><span class='line'>
-</span><span class='line'>[uwsgi]
-</span><span class='line'>plugins=python  
-</span><span class='line'>vhost=true  
-</span><span class='line'>socket=/var/run/uwsgi/app/iredadmin/iredadmin.socket</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Create a hard link for it:</p>
-
-<p>ln /etc/uwsgi/apps-available/iredadmin.ini /etc/uwsgi/apps-enabled/iredadmin.ini</p>
-
-<p>Add permission to access the iredadmin files:</p>
-
-<p>chown www-data:www-data /usr/share/apache2/iredadmin/* -R</p>
-
-<p>With this we just need to add the configuration to nginx, create a config file at /etc/nginx/sites-available/iredadmin.yourdomain.com:</p>
-
-<figure class='code'><figcaption><span>./dfPropaganda &#8211;installing iRedmail </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>server {  
-</span><span class='line'>    listen          80;
-</span><span class='line'>    server_name iredadmin.yourdomain.com;
-</span><span class='line'>
-</span><span class='line'>    location / {
-</span><span class='line'>        rewrite ^(.*) https://$server_name$1 permanent;
-</span><span class='line'>    }
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>server {  
-</span><span class='line'>    listen 443;
-</span><span class='line'>    server_name iredadmin.yourdomain.com;
-</span><span class='line'>
-</span><span class='line'>    access_log  /var/log/nginx/iredadmin.access_log;
-</span><span class='line'>    error_log   /var/log/nginx/iredadmin.error_log;
-</span><span class='line'>
-</span><span class='line'>    location / {
-</span><span class='line'>        root /usr/share/apache2/iredadmin;
-</span><span class='line'>        uwsgi_pass unix:///var/run/uwsgi/app/iredadmin/iredadmin.socket;
-</span><span class='line'>        uwsgi_param UWSGI_PYHOME /usr/share/apache2/iredadmin/python-home;
-</span><span class='line'>        uwsgi_param UWSGI_CHDIR /usr/share/apache2/iredadmin;
-</span><span class='line'>        uwsgi_param UWSGI_SCRIPT iredadmin;
-</span><span class='line'>        include uwsgi_params;
-</span><span class='line'>    }
-</span><span class='line'>
-</span><span class='line'>    location /static {
-</span><span class='line'>        alias /usr/share/apache2/iredadmin/static/;
-</span><span class='line'>    }
-</span><span class='line'>
-</span><span class='line'>    ssl                  on;
-</span><span class='line'>    ssl_certificate      /etc/ssl/certs/iRedMail_CA.pem;
-</span><span class='line'>    ssl_certificate_key  /etc/ssl/private/iRedMail.key;
-</span><span class='line'>    ssl_session_timeout  5m;
-</span><span class='line'>    ssl_protocols  SSLv2 SSLv3 TLSv1;
-</span><span class='line'>    ssl_ciphers  ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;
-</span><span class='line'>    ssl_prefer_server_ciphers   on;
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>To enable the site create a link to sites-enabled:</p>
-
-<p>ln /etc/nginx/sites-availabled/iredadmin.yourdoimain.com /etc/nginx/sites-enabled/iredadmin.yourdoimain.com</p>
-
-<blockquote><p>How to install iredmail in ubuntu with nginx server, if you have some problem, you can comment in this post, and maybe i can help you .<br/>thanks to :</p><p><br/>    http://antlite.com/blog/2011/06/ubuntu-iredmail-nginx-settings/<br/>    http://stackoverflow.com/questions/15974056/setup-iredmail-admin-site-in-nginx-on-ubuntu-12-04</p><footer><strong>eridlabs</strong> <cite><a href='http://blog.eridlabs.com/using-iredmail-with-nginx-ubuntu-13-04-x64/'>blog.eridlabs.com/&hellip;</a></cite></footer></blockquote>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/08/12/steve-jobs-quote/">Steve Jobs Quote</a></h1>
+    <a title="GitHub" href="https://github.com/dfPropaganda"><img src="/images/glyphicons_social_21_github.png"/></a>
     
     
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-12T23:45:05+07:00" pubdate data-updated="true"></time>
-        
-           | <a href="/blog/2014/08/12/steve-jobs-quote/#disqus_thread"
-             data-disqus-identifier="http://dfpropaganda.github.io/blog/2014/08/12/steve-jobs-quote/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote><p>Your time is limited, so don&#8217;t waste it living someone else&#8217;s life. Don&#8217;t be trapped by dogma - which is living with the results of other people&#8217;s thinking. Don&#8217;t let the noise of others&#8217; opinions drown out your own inner voice. And most important, have the courage to follow your heart and intuition.</p><footer><strong>Steve Jobs</strong></footer></blockquote>
-
-
-
-
-<blockquote><p>Everyone here has the sense that right now is one of those moments when we are influencing the future.</p><footer><strong>Steve Jobs</strong></footer></blockquote>
-
-
-
-
-<blockquote><p>No one wants to die. Even people who want to go to heaven don&#8217;t want to die to get there. And yet death is the destination we all share. No one has ever escaped it. And that is as it should be, because Death is very likely the single best invention of Life. It is Life&#8217;s change agent. It clears out the old to make way for the new.</p><footer><strong>Steve Jobs</strong></footer></blockquote>
-
-
-
-
-<blockquote><p>Innovation distinguishes between a leader and a follower.</p><footer><strong>Steve Jobs</strong></footer></blockquote>
-
-
-
-
-<blockquote><p>Be a yardstick of quality. Some people aren&#8217;t used to an environment where excellence is expected.</p><footer><strong>Steve Jobs</strong></footer></blockquote>
-
-
-
-
-<blockquote><p>My favorite things in life don&#8217;t cost any money. It&#8217;s really clear that the most precious resource we all have is time.</p><footer><strong>Steve Jobs</strong></footer></blockquote>
-
-
-
-
-<blockquote><p>Design is not just what it looks like and feels like. Design is how it works.</p><footer><strong>Steve Jobs</strong></footer></blockquote>
-
-
-
-
-<blockquote><p>Stay Hungry, Stay foolish .</p><footer><strong>Steve Jobs</strong> <cite><a href='http://www.brainyquote.com/quotes/authors/s/steve_jobs.html'>Steve Jobs Quote</a></cite></footer></blockquote>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/08/12/passport-by-rhenald-kasali/">PASSPORT by Rhenald Kasali</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-12T23:26:36+07:00" pubdate data-updated="true"></time>
-        
-           | <a href="/blog/2014/08/12/passport-by-rhenald-kasali/#disqus_thread"
-             data-disqus-identifier="http://dfpropaganda.github.io/blog/2014/08/12/passport-by-rhenald-kasali/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img src="https://m.ak.fbcdn.net/photos-a.ak/hphotos-ak-xfa1/v/t1.0-0/10259748_10152380503404925_649143119527793549_n.jpg?oh=6519703b23a16d05aed09e7545807904&oe=5465AF80&__gda__=1417742859_1d21b75b481e03fa2d6b94838eb81b44"></p>
-
-<p>Setiap saat mulai perkuliahan, saya selalu bertanya kepada mahasiswa berapa orang yang sudah memiliki pasport. Tidak mengherankan, ternyata hanya sekitar 5% yang mengangkat tangan. Ketika ditanya berapa yang sudah pernah naik pesawat, jawabannya melonjak tajam. Hampir 90% mahasiswa saya sudah pernah melihat awan dari atas. Ini berarti mayoritas anak-anak kita hanyalah pelancong lokal.</p>
-
-<p>Maka, berbeda dengan kebanyakan dosen yang memberi tugas kertas berupa PR dan paper, di kelas-kelas yang saya asuh saya memulainya dengan memberi tugas mengurus pasport. Setiap mahasiswa harus memiliki &ldquo;surat ijin memasuki dunia global.&rdquo;. Tanpa pasport manusia akan kesepian, cupet, terkurung dalam kesempitan, menjadi pemimpin yang steril. Dua minggu kemudian, mahasiswa sudah bisa berbangga karena punya pasport.</p>
-
-<p>Setelah itu mereka bertanya lagi, untuk apa pasport ini? Saya katakan, pergilah keluar negeri yang tak berbahasa Melayu. Tidak boleh ke Malaysia, Singapura, Timor Leste atau Brunei Darussalam. Pergilah sejauh yang mampu dan bisa dijangkau.</p>
-
-<p>&ldquo;Uang untuk beli tiketnya bagaimana, pak?&rdquo;
-Saya katakan saya tidak tahu. Dalam hidup ini, setahu saya hanya orang bodohlah yang selalu memulai pertanyaan hidup, apalagi memulai misi kehidupan dan tujuannya dari uang. Dan begitu seorang pemula bertanya uangnya dari mana, maka ia akan terbelenggu oleh constraint. Dan hampir pasti jawabannya hanyalah tidak ada uang, tidak bisa, dan tidak mungkin.
-Pertanyaan seperti itu tak hanya ada di kepala mahasiswa, melainkan juga para dosen steril yang kurang jalan-jalan. Bagi mereka yang tak pernah melihat dunia, luar negeri terasa jauh, mahal, mewah, menembus batas kewajaran dan buang-buang uang. Maka tak heran banyak dosen yang takut sekolah ke luar negeri sehingga memilih kuliah di almamaternya sendiri. Padahal dunia yang terbuka bisa membukakan sejuta kesempatan untuk maju. Anda bisa mendapatkan sesuatu yang yang terbayangkan, pengetahuan, teknologi, kedewasaan, dan wisdom.</p>
-
-<p>Namun beruntunglah, pertanyaan seperti itu tak pernah ada di kepala para pelancong, dan diantaranya adalah mahasiswa yang dikenal sebagai kelompok backpackers. Mereka adalah pemburu tiket dan penginapan super murah, menggendong ransel butut dan bersandal jepit, yang kalau kehabisan uang bekerja di warung sebagai pencuci piring. Perilaku melancong mereka sebenarnya tak ada bedanya dengan remaja-remaja Minang, Banjar, atau Bugis, yang merantau ke Pulau Jawa berbekal seadanya.Ini berarti tak banyak orang yang paham bahwa bepergian keluar negeri sudah tak semenyeramkan, sejauh, bahkan semewah di masa lalu.
-Seorang mahasiswa asal daerah yang saya dorong pergi jauh, sekarang malah rajin bepergian. Ia bergabung ke dalam kelompok PKI (Pedagang Kaki Lima Internasional) yang tugasnya memetakan pameran-pameran besar yang dikoordinasi pemerintah. Disana mereka membuka lapak, mengambil resiko, menjajakan aneka barang kerajinan, dan pulangnya mereka jalan-jalan, ikut kursus, dan membawa dolar. Saat diwisuda, ia menghampiri saya dengan menunjukkan pasportnya yang tertera stempel imigrasi dari 35 negara. Selain kaya teori, matanya tajam mengendus peluang dan rasa percaya tinggi. Saat teman-temannya yang lulus cum-laude masih mencari kerja, ia sudah menjadi eksekutif di sebuah perusahaan besar di luar negeri.</p>
-
-<p>The Next Convergence
-Dalam bukunya yang berjudul The Next Convergence, penerima hadiah Nobel ekonomi Michael Spence mengatakan, dunia tengah memasuki Abad Ke tiga dari Revolusi Industri. dan sejak tahun 1950, rata-rata pendapatan penduduk dunia telah meningkat dua puluh kali lipat. Maka kendati penduduk miskin masih banyak, adalah hal yang biasa kalau kita menemukan perempuan miskin-lulusan SD dari sebuah dusun di Madura bolak-balik Surabaya-Hongkong.</p>
-
-<p>Tetapi kita juga biasa menemukan mahasiswa yang hanya sibuk demo dan tak pernah keluar negeri sekalipun. Jangankan ke luar negeri, tahu harga tiket pesawat saja tidak, apalagi memiliki pasport.Maka bagi saya, penting bagi para pendidik untuk membawa anak-anak didiknya melihat dunia. Berbekal lima ratus ribu rupiah, anak-anak SD dari Pontianak dapat diajak menumpang bis melewati perbatasan Entekong memasuki Kuching. Dalam jarak tempuh sembilan jam mereka sudah mendapatkan pelajaran PPKN yang sangat penting, yaitu pupusnya kebangsaan karena kita kurang urus daerah perbatasan. Rumah-rumah kumuh, jalan berlubang, pedagang kecil yang tak diurus Pemda, dan infrastruktur yang buruk ada di bagian sini. Sedangkan hal sebaliknya ada di sisi seberang. Anak-anak yang melihat dunia akan terbuka matanya dan memakai nuraninya saat memimpin bangsa di masa depan. Di universitas Indonesia, setiap mahasiswa saya diwajibkan memiliki pasport dan melihat minimal satu negara.</p>
-
-<p>Dulu saya sendiri yang menjadi gembala sekaligus guide nya. Kami menembus Chiangmay dan menyaksikan penduduk miskin di Thailand dan Vietnam bertarung melawan arus globalisasi. Namun belakangan saya berubah pikiran, kalau diantar oleh dosennya, kapan memiliki keberanian dan inisiatif? Maka perjalanan penuh pertanyaan pun mereka jalani. Saat anak-anak Indonesia ketakutan tak bisa berbahasa Inggris, anak-anak Korea dan Jepang yang huruf tulisannya jauh lebih rumit dan pronounciation-nya sulit dimengerti menjelajahi dunia tanpa rasa takut.</p>
-
-<p>Uniknya, anak-anak didik saya yang sudah punya pasport itu 99% akhirnya dapat pergi keluar negeri. Sekali lagi, jangan tanya darimana uangnya. Mereka memutar otak untuk mendapatkan tiket, menabung, mencari losmen-losmen murah, menghubungi sponsor dan mengedarkan kotak sumbangan. Tentu saja, kalau kurang sedikit ya ditomboki dosennya sendiri.</p>
-
-<p>Namun harap dimaklumi, anak-anak didik saya yang wajahnya ndeso sekalipun kini dipasportnya tertera satu dua cap imigrasi luar negeri. Apakah mereka anak-anak orang kaya yang orangtuanya mampu membelikan mereka tiket? Tentu tidak. Di UI, sebagian mahasiswa kami adalah anak PNS, bahkan tidak jarang mereka anak petani dan nelayan. Tetapi mereka tak mau kalah dengan TKW yang meski tak sepandai mereka, kini sudah pandai berbahasa asing.</p>
-
-<p>Anak-anak yang ditugaskan ke luar negeri secara mandiri ternyata memiliki daya inovasi dan inisiatif yang tumbuh. Rasa percaya diri mereka bangkit. Sekembalinya dari luar negeri mereka membawa segudang pengalaman, cerita, gambar dan foto yang ternyata sangat membentuk visi mereka.
-Saya pikir ada baiknya para guru mulai membiasakan anak didiknya memiliki pasport. Pasport adalah tiket untuk melihat dunia, dan berawal dari pasport pulalah seorang santri dari Jawa Timur menjadi pengusaha di luar negeri. Di Italy saya bertemu Dewi Francesca, perempuan asal Bali yang memiliki kafe yang indah di Rocca di Papa. Dan karena pasport pulalah, Yohannes Surya mendapat bea siswa di Amerika Serikat. Ayo, jangan kalah dengan Gayus Tambunan atau Nazaruddin yang baru punya pasport dari uang negara.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/08/12/daftar-web-tentang-beasiswa-and-pendaftaran/">Daftar Web Tentang Beasiswa &amp; Pendaftaran</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-12T23:17:44+07:00" pubdate data-updated="true"></time>
-        
-           | <a href="/blog/2014/08/12/daftar-web-tentang-beasiswa-and-pendaftaran/#disqus_thread"
-             data-disqus-identifier="http://dfpropaganda.github.io/blog/2014/08/12/daftar-web-tentang-beasiswa-and-pendaftaran/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img src="http://www.batangharikab.go.id/bat/foto_publikasi/74beasiswa.jpg"></p>
-
-<p>berikut ini adalah list-list atau daftar web yang menyediakan info tentang beasiswa atau scholarship,</p>
-
-<ol>
-<li>Australia Award Scholarship (<a href="http://australiaawardsindo.or.id/">http://australiaawardsindo.or.id/</a>)</li>
-<li>LPDP Scholarship (<a href="http://www.beasiswalpdp.org/index.html">http://www.beasiswalpdp.org/index.html</a>)</li>
-<li>DIKTI Scholarship</li>
-<li>Dalam Negeri (<a href="http://www.beasiswa.dikti.go.id/dn/">http://www.beasiswa.dikti.go.id/dn/</a>)</li>
-<li>Luar Negeri (<a href="http://beasiswa.dikti.go.id/ln/">http://beasiswa.dikti.go.id/ln/</a>)</li>
-<li>Turkey Government Scholarship (<a href="http://www.turkiyeburslari.gov.tr/index.php/en">http://www.turkiyeburslari.gov.tr/index.php/en</a>)</li>
-<li>General Cultural Scholarship India (<a href="http://www.iccrindia.net/gereralscheme.html">http://www.iccrindia.net/gereralscheme.html</a>)</li>
-<li>USA Government Scholarship</li>
-<li>(<a href="http://www.aminef.or.id/index.php">http://www.aminef.or.id/index.php</a>)</li>
-<li>(<a href="http://www.iief.or.id/">http://www.iief.or.id/</a>)</li>
-<li>Netherland Government Scholarship (<a href="http://www.nesoindonesia.or.id/beasiswa">http://www.nesoindonesia.or.id/beasiswa</a>)</li>
-<li>Korean Government Scholarship (<a href="http://www.niied.go.kr/eng/contents.do?contentsNo=78&amp;menuNo=349">http://www.niied.go.kr/eng/contents.do?contentsNo=78&amp;menuNo=349</a>)</li>
-<li>Belgium Government Scholarship (<a href="http://www.vliruos.be/4273.aspx">http://www.vliruos.be/4273.aspx</a>)</li>
-<li>Israel Government Scholarship (<a href="http://www.mfa.gov.il/mfa/abouttheministry/departments/pages/scholarships%20offered%20by%20the%20israeli%20government%20to.aspx">http://www.mfa.gov.il/mfa/abouttheministry/departments/pages/scholarships%20offered%20by%20the%20israeli%20government%20to.aspx</a>)</li>
-<li>Sciences Po France (<a href="http://formation.sciences-po.fr/en/contenu/the-emile-boutmy-scholarship">http://formation.sciences-po.fr/en/contenu/the-emile-boutmy-scholarship</a>)</li>
-<li>Utrecht University Netherland (<a href="http://www.uu.nl/university/international-">http://www.uu.nl/university/international-</a>
-students/en/financialmatters/grantsandscholarships/Pages/utrechtexcellencescholarships.aspx)</li>
-<li>Prasetya Mulya Business School Indonesia (<a href="http://www.pmbs.ac.id/s2/scholarship.php?lang=ENG">http://www.pmbs.ac.id/s2/scholarship.php?lang=ENG</a>)</li>
-<li>Brunei Darussalam Government Scholarship (<a href="http://www.mofat.gov.bn/index.php/announcement">http://www.mofat.gov.bn/index.php/announcement</a>)</li>
-<li>Monbugakusho Scholarship Japan (<a href="http://www.id.emb-japan.go.jp/sch.html">http://www.id.emb-japan.go.jp/sch.html</a>)</li>
-<li>Paramadina University Master Fellowship Indonesia (<a href="https://gradschool.paramadina.ac.id/in/graduate-school-fellowship/paramadina-medco-fellowship-2013.html">https://gradschool.paramadina.ac.id/in/graduate-school-fellowship/paramadina-medco-fellowship-2013.html</a>)</li>
-<li>PPM School of Management Indonesia (<a href="http://ppm-manajemen.ac.id/beasiswa-penuh-s2-mm-reguler/">http://ppm-manajemen.ac.id/beasiswa-penuh-s2-mm-reguler/</a>)</li>
-<li>University of Twente Netherland (<a href="http://www.utwente.nl/internationalstudents/scholarshipsandgrants/all/uts/">http://www.utwente.nl/internationalstudents/scholarshipsandgrants/all/uts/</a>)</li>
-<li>Sweden Government Scholarship (<a href="http://www.studyinsweden.se/Scholarships/">http://www.studyinsweden.se/Scholarships/</a>)</li>
-<li>Chinese Government Scholarship (<a href="http://www.csc.edu.cn/laihua/scholarshipdetailen.aspx?cid=97&amp;id=1422">http://www.csc.edu.cn/laihua/scholarshipdetailen.aspx?cid=97&amp;id=1422</a>)</li>
-<li>Taiwan Government Scholarship (<a href="http://www.studyintaiwan.org/taiwan_scholarships.html">http://www.studyintaiwan.org/taiwan_scholarships.html</a>)</li>
-<li>United Kingdom Government SCholarship (<a href="http://www.chevening.org/indonesia/">http://www.chevening.org/indonesia/</a>)</li>
-<li>Panasonic Scholarship Japan (<a href="http://panasonic.net/citizenship/scholarships/pso/requirements/">http://panasonic.net/citizenship/scholarships/pso/requirements/</a>)</li>
-<li>Ancora Foundation Scholarship (<a href="http://ancorafoundation.com/">http://ancorafoundation.com/</a>)</li>
-<li>Asian Public Intellectuals Fellowship Japan (<a href="http://www.api-fellowships.org/body/">http://www.api-fellowships.org/body/</a>)</li>
-<li>AUN/SEED-Net Scholarship (<a href="http://www.seed-net.org/index.php">http://www.seed-net.org/index.php</a>)</li>
-<li>Art Asia Major Scholarship Korea National University of Arts (<a href="http://eng.karts.ac.kr:81/karts/board/list.jsp?">http://eng.karts.ac.kr:81/karts/board/list.jsp?</a>
-c_no=003013002&amp;bt_no=123&amp;page=1&amp;b_category=&amp;b_categoryimg=&amp;searchSelect=&amp;keyword=&amp;divisionSelect=&amp;engNotice=engNotice)</li>
-<li>Ritsumeikan Asia Pacific University Japan (<a href="http://www.apu.ac.jp/home/life/index.php?content_id=30">http://www.apu.ac.jp/home/life/index.php?content_id=30</a>)</li>
-<li>Seoul National University Korea (<a href="http://en.snu.ac.kr/apply/graduate/scholarships/before-application">http://en.snu.ac.kr/apply/graduate/scholarships/before-application</a>)</li>
-<li>DIKTIS Overseas Scholarship (<a href="http://www.pendis.kemenag.go.id/beasiswaln/">http://www.pendis.kemenag.go.id/beasiswaln/</a>)</li>
-<li>Honjo International Scholarship Foundation Japan (<a href="http://hisf.or.jp/english/sch-f/">http://hisf.or.jp/english/sch-f/</a>)</li>
-<li>IDB Merit Scholarship Programme for High Technology (<a href="http://www.isdb.org/irj/portal/anonymous?NavigationTarget=navurl%3A%2F%2Fc28c70fde436815fcff1257ef5982a08">http://www.isdb.org/irj/portal/anonymous?NavigationTarget=navurl%3A%2F%2Fc28c70fde436815fcff1257ef5982a08</a>)</li>
-<li>International HIV &amp; Drug Use Fellowship USA (<a href="http://www.iasociety.org/fellowship.aspx">http://www.iasociety.org/fellowship.aspx</a>)</li>
-<li>Nitori International Scholarship Foundation Japan (<a href="http://www.nitori-shougakuzaidan.com/en/">http://www.nitori-shougakuzaidan.com/en/</a>)</li>
-<li>School of Government and Public Policy Indonesia (<a href="http://sgpp.ac.id/pages/financial-conditions">http://sgpp.ac.id/pages/financial-conditions</a>)</li>
-<li>Inpex Scholarship Foundation Japan (<a href="http://www.inpex-s.com/application.html">http://www.inpex-s.com/application.html</a>)</li>
-<li>Asia University Taiwan (<a href="http://ciae.asia.edu.tw/AdmissionsScholarship.html">http://ciae.asia.edu.tw/AdmissionsScholarship.html</a>)</li>
-<li>Macquaire University Australia (<a href="http://www.mq.edu.au/future_students/international/scholarships_and_awards/macquarie_university_international_scholarships/">http://www.mq.edu.au/future_students/international/scholarships_and_awards/macquarie_university_international_scholarships/</a>)</li>
-</ol>
-
-
-<p>Sumber : Facebook</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/08/10/sial/">Octopress Review</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-10T23:07:51+07:00" pubdate data-updated="true"></time>
-        
-           | <a href="/blog/2014/08/10/sial/#disqus_thread"
-             data-disqus-identifier="http://dfpropaganda.github.io/blog/2014/08/10/sial/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
     
   </div>
 </div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="article-list">
+      <div class="container">
+        
+      </div>
+    </div>
+
+    <hr class="divider-short"/>
+
+    <div class="archive-link">
+      <h3><a href="/posts/">All Posts</a></h3>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="her-row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+  <a href="/"><h4>Home</h4></a>
+</div>
+
+<div class="col-md-2">
+  <div class="social-icon-list">
     
-      <li class="post">
-        <a href="/blog/2014/08/13/installing-iredmail-in-ubuntu-with-nginx/">Installing iRedmail in Ubuntu With Nginx</a>
-      </li>
+    <a href="https://twitter.com/suryaadtmaja"><img src="/images/glyphicons_social_31_twitter.png"/></a>
     
-      <li class="post">
-        <a href="/blog/2014/08/12/steve-jobs-quote/">Steve Jobs Quote</a>
-      </li>
+
     
-      <li class="post">
-        <a href="/blog/2014/08/12/passport-by-rhenald-kasali/">PASSPORT by Rhenald Kasali</a>
-      </li>
+    <a href="https://github.com/dfPropaganda"><img src="/images/glyphicons_social_21_github.png"/></a>
     
-      <li class="post">
-        <a href="/blog/2014/08/12/daftar-web-tentang-beasiswa-and-pendaftaran/">Daftar Web Tentang Beasiswa &amp; Pendaftaran</a>
-      </li>
+
     
-      <li class="post">
-        <a href="/blog/2014/08/10/sial/">Octopress Review</a>
-      </li>
+
     
-  </ul>
-</section>
-<section>
-<a class="twitter-timeline"  href="https://twitter.com/suryaadtmaja"  data-widget-id="336768688558592000">Tweet oleh @suryaadtmaja</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</section><section>
-  <h1>Categories</h1>
-<ul id="categories">
-    <li class='category'><a href='/blog/categories/apple/'>apple (1)</a></li>
-<li class='category'><a href='/blog/categories/beasiswa/'>beasiswa (1)</a></li>
-<li class='category'><a href='/blog/categories/beasiswa-/'>beasiswa, (1)</a></li>
-<li class='category'><a href='/blog/categories/blog/'>blog (1)</a></li>
-<li class='category'><a href='/blog/categories/info/'>info (1)</a></li>
-<li class='category'><a href='/blog/categories/pendidikan/'>pendidikan (1)</a></li>
-<li class='category'><a href='/blog/categories/quote/'>quote (1)</a></li>
-<li class='category'><a href='/blog/categories/scholarship-/'>scholarship, (1)</a></li>
-<li class='category'><a href='/blog/categories/server/'>server (1)</a></li>
-<li class='category'><a href='/blog/categories/stevejobs/'>stevejobs (1)</a></li>
-<li class='category'><a href='/blog/categories/sysadmin/'>sysadmin (1)</a></li>
-<li class='category'><a href='/blog/categories/ubuntu/'>ubuntu (1)</a></li>
+  </div>
+</div>
 
-    </ul>
-    </section>
+<div class="pull-right">
+  <h4>Powered by <a href="http://octopress.org/">Octopress</a>. Designed by <a href="http://AdrianArtiles.com">Adrian Artiles</a>.</h4>
+</div>
 
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  
-  <a href="https://github.com/dfPropaganda">@dfPropaganda</a> on GitHub
-  
-  <script type="text/javascript">
-    $(document).ready(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'dfPropaganda',
-            count: 0,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-
-
-<section>
-  <h1>About Me</h1>
-  <p>dfPropaganda is my nickname</p>
-  <p>live in bogor, indonesia</p>
-  <p>Work as Web Developer, Web Design & Sysadmin in IIM Company</p>
-  <center><img src="http://2.bp.blogspot.com/-zyUguwEd4pg/U1urzeOaASI/AAAAAAAAAHA/0-x6abIcC9Y/s1600/masha.png" height="400" width="300"></center>
-</section>
-
-  
-</aside>
 
     </div>
   </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - dfpropaganda -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
 </footer>
-  
 
-<script type="text/javascript">
-      var disqus_shortname = 'dfpropaganda';
-      
-        
-        var disqus_script = 'count.js';
-      
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
+    
+  </body>
 </html>

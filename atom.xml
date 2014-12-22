@@ -4,7 +4,7 @@
   <title><![CDATA[dfPropaganda]]></title>
   <link href="http://dfpropaganda.github.io/atom.xml" rel="self"/>
   <link href="http://dfpropaganda.github.io/"/>
-  <updated>2014-08-13T00:18:46+07:00</updated>
+  <updated>2014-12-23T00:09:25+07:00</updated>
   <id>http://dfpropaganda.github.io/</id>
   <author>
     <name><![CDATA[dfpropaganda]]></name>
@@ -21,6 +21,11 @@
     <content type="html"><![CDATA[<p>Roundcubemail</p>
 
 <p>We just need to add a server block for nginx and make it work with PHP, create a file at /etc/nginx/sites-available/mail.yourdomain.com with the following configuration (you must change yourdomain.com for your actual domain):</p>
+
+<!-- more -->
+
+
+
 
 <figure class='code'><figcaption><span>./dfPropaganda &#8211;installing iRedmail </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -261,6 +266,11 @@
 
 
 
+<!-- more -->
+
+
+
+
 <blockquote><p>No one wants to die. Even people who want to go to heaven don&#8217;t want to die to get there. And yet death is the destination we all share. No one has ever escaped it. And that is as it should be, because Death is very likely the single best invention of Life. It is Life&#8217;s change agent. It clears out the old to make way for the new.</p><footer><strong>Steve Jobs</strong></footer></blockquote>
 
 
@@ -304,6 +314,9 @@
 
 <p>Setelah itu mereka bertanya lagi, untuk apa pasport ini? Saya katakan, pergilah keluar negeri yang tak berbahasa Melayu. Tidak boleh ke Malaysia, Singapura, Timor Leste atau Brunei Darussalam. Pergilah sejauh yang mampu dan bisa dijangkau.</p>
 
+<!-- more -->
+
+
 <p>&ldquo;Uang untuk beli tiketnya bagaimana, pak?&rdquo;
 Saya katakan saya tidak tahu. Dalam hidup ini, setahu saya hanya orang bodohlah yang selalu memulai pertanyaan hidup, apalagi memulai misi kehidupan dan tujuannya dari uang. Dan begitu seorang pemula bertanya uangnya dari mana, maka ia akan terbelenggu oleh constraint. Dan hampir pasti jawabannya hanyalah tidak ada uang, tidak bisa, dan tidak mungkin.
 Pertanyaan seperti itu tak hanya ada di kepala mahasiswa, melainkan juga para dosen steril yang kurang jalan-jalan. Bagi mereka yang tak pernah melihat dunia, luar negeri terasa jauh, mahal, mewah, menembus batas kewajaran dan buang-buang uang. Maka tak heran banyak dosen yang takut sekolah ke luar negeri sehingga memilih kuliah di almamaternya sendiri. Padahal dunia yang terbuka bisa membukakan sejuta kesempatan untuk maju. Anda bisa mendapatkan sesuatu yang yang terbayangkan, pengetahuan, teknologi, kedewasaan, dan wisdom.</p>
@@ -335,6 +348,9 @@ Saya pikir ada baiknya para guru mulai membiasakan anak didiknya memiliki paspor
     <content type="html"><![CDATA[<p><img src="http://www.batangharikab.go.id/bat/foto_publikasi/74beasiswa.jpg"></p>
 
 <p>berikut ini adalah list-list atau daftar web yang menyediakan info tentang beasiswa atau scholarship,</p>
+
+<!-- more -->
+
 
 <ol>
 <li>Australia Award Scholarship (<a href="http://australiaawardsindo.or.id/">http://australiaawardsindo.or.id/</a>)</li>

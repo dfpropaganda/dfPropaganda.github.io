@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Info | dfPropaganda]]></title>
+  <title><![CDATA[Category: info | dfPropaganda]]></title>
   <link href="http://dfpropaganda.github.io/blog/categories/info/atom.xml" rel="self"/>
   <link href="http://dfpropaganda.github.io/"/>
-  <updated>2014-08-13T00:18:46+07:00</updated>
+  <updated>2014-12-23T00:09:25+07:00</updated>
   <id>http://dfpropaganda.github.io/</id>
   <author>
     <name><![CDATA[dfpropaganda]]></name>
@@ -14,13 +14,16 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Daftar Web Tentang Beasiswa &amp; Pendaftaran]]></title>
+    <title type="html"><![CDATA[Daftar Web tentang Beasiswa &amp; Pendaftaran]]></title>
     <link href="http://dfpropaganda.github.io/blog/2014/08/12/daftar-web-tentang-beasiswa-and-pendaftaran/"/>
     <updated>2014-08-12T23:17:44+07:00</updated>
     <id>http://dfpropaganda.github.io/blog/2014/08/12/daftar-web-tentang-beasiswa-and-pendaftaran</id>
     <content type="html"><![CDATA[<p><img class="<a" src="href="http://www.batangharikab.go.id/bat/foto_publikasi/74beasiswa.jpg">http://www.batangharikab.go.id/bat/foto_publikasi/74beasiswa.jpg</a>&#8221;></p>
 
 <p>berikut ini adalah list-list atau daftar web yang menyediakan info tentang beasiswa atau scholarship,</p>
+
+<!-- more -->
+
 
 <ol>
 <li>Australia Award Scholarship (<a href="http://australiaawardsindo.or.id/">http://australiaawardsindo.or.id/</a>)</li>
